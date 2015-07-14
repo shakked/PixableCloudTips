@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		552BBDDE1B5566EF00A9FE64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552BBDDD1B5566EF00A9FE64 /* AppDelegate.swift */; };
+		552BBDE51B5566EF00A9FE64 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552BBDE41B5566EF00A9FE64 /* Images.xcassets */; };
+		552BBDE81B5566EF00A9FE64 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552BBDE61B5566EF00A9FE64 /* LaunchScreen.xib */; };
+		552BBDF41B5566EF00A9FE64 /* PixableCloudTipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552BBDF31B5566EF00A9FE64 /* PixableCloudTipsTests.swift */; };
+		552BBDFF1B55670800A9FE64 /* CloudTipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552BBDFD1B55670800A9FE64 /* CloudTipViewController.swift */; };
+		552BBE001B55670800A9FE64 /* CloudTipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552BBDFE1B55670800A9FE64 /* CloudTipViewController.xib */; };
+		552BBE021B55671700A9FE64 /* CloudTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552BBE011B55671700A9FE64 /* CloudTipView.swift */; };
+		552BBE041B55672700A9FE64 /* CloudTipDimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552BBE031B55672700A9FE64 /* CloudTipDimensions.swift */; };
+		552BBE0B1B55A42000A9FE64 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552BBE0A1B55A42000A9FE64 /* Dispatch.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		552BBDEE1B5566EF00A9FE64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 552BBDD01B5566EF00A9FE64 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 552BBDD71B5566EF00A9FE64;
+			remoteInfo = PixableCloudTips;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		552BBDD81B5566EF00A9FE64 /* PixableCloudTips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixableCloudTips.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		552BBDDC1B5566EF00A9FE64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		552BBDDD1B5566EF00A9FE64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		552BBDE41B5566EF00A9FE64 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		552BBDE71B5566EF00A9FE64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		552BBDED1B5566EF00A9FE64 /* PixableCloudTipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PixableCloudTipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		552BBDF21B5566EF00A9FE64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		552BBDF31B5566EF00A9FE64 /* PixableCloudTipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixableCloudTipsTests.swift; sourceTree = "<group>"; };
+		552BBDFD1B55670800A9FE64 /* CloudTipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudTipViewController.swift; sourceTree = "<group>"; };
+		552BBDFE1B55670800A9FE64 /* CloudTipViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CloudTipViewController.xib; sourceTree = "<group>"; };
+		552BBE011B55671700A9FE64 /* CloudTipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudTipView.swift; sourceTree = "<group>"; };
+		552BBE031B55672700A9FE64 /* CloudTipDimensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudTipDimensions.swift; sourceTree = "<group>"; };
+		552BBE0A1B55A42000A9FE64 /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		552BBDD51B5566EF00A9FE64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		552BBDEA1B5566EF00A9FE64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		552BBDCF1B5566EF00A9FE64 = {
+			isa = PBXGroup;
+			children = (
+				552BBDDA1B5566EF00A9FE64 /* PixableCloudTips */,
+				552BBDF01B5566EF00A9FE64 /* PixableCloudTipsTests */,
+				552BBDD91B5566EF00A9FE64 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		552BBDD91B5566EF00A9FE64 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				552BBDD81B5566EF00A9FE64 /* PixableCloudTips.app */,
+				552BBDED1B5566EF00A9FE64 /* PixableCloudTipsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		552BBDDA1B5566EF00A9FE64 /* PixableCloudTips */ = {
+			isa = PBXGroup;
+			children = (
+				552BBE0A1B55A42000A9FE64 /* Dispatch.swift */,
+				552BBDDD1B5566EF00A9FE64 /* AppDelegate.swift */,
+				552BBDFD1B55670800A9FE64 /* CloudTipViewController.swift */,
+				552BBDFE1B55670800A9FE64 /* CloudTipViewController.xib */,
+				552BBE011B55671700A9FE64 /* CloudTipView.swift */,
+				552BBE031B55672700A9FE64 /* CloudTipDimensions.swift */,
+				552BBDE41B5566EF00A9FE64 /* Images.xcassets */,
+				552BBDE61B5566EF00A9FE64 /* LaunchScreen.xib */,
+				552BBDDB1B5566EF00A9FE64 /* Supporting Files */,
+			);
+			path = PixableCloudTips;
+			sourceTree = "<group>";
+		};
+		552BBDDB1B5566EF00A9FE64 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				552BBDDC1B5566EF00A9FE64 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		552BBDF01B5566EF00A9FE64 /* PixableCloudTipsTests */ = {
+			isa = PBXGroup;
+			children = (
+				552BBDF31B5566EF00A9FE64 /* PixableCloudTipsTests.swift */,
+				552BBDF11B5566EF00A9FE64 /* Supporting Files */,
+			);
+			path = PixableCloudTipsTests;
+			sourceTree = "<group>";
+		};
+		552BBDF11B5566EF00A9FE64 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				552BBDF21B5566EF00A9FE64 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		552BBDD71B5566EF00A9FE64 /* PixableCloudTips */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 552BBDF71B5566EF00A9FE64 /* Build configuration list for PBXNativeTarget "PixableCloudTips" */;
+			buildPhases = (
+				552BBDD41B5566EF00A9FE64 /* Sources */,
+				552BBDD51B5566EF00A9FE64 /* Frameworks */,
+				552BBDD61B5566EF00A9FE64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PixableCloudTips;
+			productName = PixableCloudTips;
+			productReference = 552BBDD81B5566EF00A9FE64 /* PixableCloudTips.app */;
+			productType = "com.apple.product-type.application";
+		};
+		552BBDEC1B5566EF00A9FE64 /* PixableCloudTipsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 552BBDFA1B5566EF00A9FE64 /* Build configuration list for PBXNativeTarget "PixableCloudTipsTests" */;
+			buildPhases = (
+				552BBDE91B5566EF00A9FE64 /* Sources */,
+				552BBDEA1B5566EF00A9FE64 /* Frameworks */,
+				552BBDEB1B5566EF00A9FE64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				552BBDEF1B5566EF00A9FE64 /* PBXTargetDependency */,
+			);
+			name = PixableCloudTipsTests;
+			productName = PixableCloudTipsTests;
+			productReference = 552BBDED1B5566EF00A9FE64 /* PixableCloudTipsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		552BBDD01B5566EF00A9FE64 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Zachary Shakked";
+				TargetAttributes = {
+					552BBDD71B5566EF00A9FE64 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					552BBDEC1B5566EF00A9FE64 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 552BBDD71B5566EF00A9FE64;
+					};
+				};
+			};
+			buildConfigurationList = 552BBDD31B5566EF00A9FE64 /* Build configuration list for PBXProject "PixableCloudTips" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 552BBDCF1B5566EF00A9FE64;
+			productRefGroup = 552BBDD91B5566EF00A9FE64 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				552BBDD71B5566EF00A9FE64 /* PixableCloudTips */,
+				552BBDEC1B5566EF00A9FE64 /* PixableCloudTipsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		552BBDD61B5566EF00A9FE64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				552BBDE81B5566EF00A9FE64 /* LaunchScreen.xib in Resources */,
+				552BBE001B55670800A9FE64 /* CloudTipViewController.xib in Resources */,
+				552BBDE51B5566EF00A9FE64 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		552BBDEB1B5566EF00A9FE64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		552BBDD41B5566EF00A9FE64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				552BBE041B55672700A9FE64 /* CloudTipDimensions.swift in Sources */,
+				552BBDFF1B55670800A9FE64 /* CloudTipViewController.swift in Sources */,
+				552BBE0B1B55A42000A9FE64 /* Dispatch.swift in Sources */,
+				552BBDDE1B5566EF00A9FE64 /* AppDelegate.swift in Sources */,
+				552BBE021B55671700A9FE64 /* CloudTipView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		552BBDE91B5566EF00A9FE64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				552BBDF41B5566EF00A9FE64 /* PixableCloudTipsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		552BBDEF1B5566EF00A9FE64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 552BBDD71B5566EF00A9FE64 /* PixableCloudTips */;
+			targetProxy = 552BBDEE1B5566EF00A9FE64 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		552BBDE61B5566EF00A9FE64 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				552BBDE71B5566EF00A9FE64 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		552BBDF51B5566EF00A9FE64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		552BBDF61B5566EF00A9FE64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		552BBDF81B5566EF00A9FE64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PixableCloudTips/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		552BBDF91B5566EF00A9FE64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PixableCloudTips/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		552BBDFB1B5566EF00A9FE64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PixableCloudTipsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PixableCloudTips.app/PixableCloudTips";
+			};
+			name = Debug;
+		};
+		552BBDFC1B5566EF00A9FE64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PixableCloudTipsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PixableCloudTips.app/PixableCloudTips";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		552BBDD31B5566EF00A9FE64 /* Build configuration list for PBXProject "PixableCloudTips" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				552BBDF51B5566EF00A9FE64 /* Debug */,
+				552BBDF61B5566EF00A9FE64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		552BBDF71B5566EF00A9FE64 /* Build configuration list for PBXNativeTarget "PixableCloudTips" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				552BBDF81B5566EF00A9FE64 /* Debug */,
+				552BBDF91B5566EF00A9FE64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		552BBDFA1B5566EF00A9FE64 /* Build configuration list for PBXNativeTarget "PixableCloudTipsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				552BBDFB1B5566EF00A9FE64 /* Debug */,
+				552BBDFC1B5566EF00A9FE64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 552BBDD01B5566EF00A9FE64 /* Project object */;
+}
