@@ -16,6 +16,7 @@
 		552BBE021B55671700A9FE64 /* CloudTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552BBE011B55671700A9FE64 /* CloudTipView.swift */; };
 		552BBE041B55672700A9FE64 /* CloudTipDimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552BBE031B55672700A9FE64 /* CloudTipDimensions.swift */; };
 		552BBE0B1B55A42000A9FE64 /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552BBE0A1B55A42000A9FE64 /* Dispatch.swift */; };
+		552BBE181B56AD5000A9FE64 /* FilledCloudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552BBE171B56AD5000A9FE64 /* FilledCloudView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		552BBE011B55671700A9FE64 /* CloudTipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudTipView.swift; sourceTree = "<group>"; };
 		552BBE031B55672700A9FE64 /* CloudTipDimensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudTipDimensions.swift; sourceTree = "<group>"; };
 		552BBE0A1B55A42000A9FE64 /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
+		552BBE171B56AD5000A9FE64 /* FilledCloudView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FilledCloudView.swift; path = ../FilledCloudView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		552BBDDA1B5566EF00A9FE64 /* PixableCloudTips */ = {
 			isa = PBXGroup;
 			children = (
+				552BBE171B56AD5000A9FE64 /* FilledCloudView.swift */,
 				552BBE0A1B55A42000A9FE64 /* Dispatch.swift */,
 				552BBDDD1B5566EF00A9FE64 /* AppDelegate.swift */,
 				552BBDFD1B55670800A9FE64 /* CloudTipViewController.swift */,
@@ -223,6 +226,7 @@
 			files = (
 				552BBE041B55672700A9FE64 /* CloudTipDimensions.swift in Sources */,
 				552BBDFF1B55670800A9FE64 /* CloudTipViewController.swift in Sources */,
+				552BBE181B56AD5000A9FE64 /* FilledCloudView.swift in Sources */,
 				552BBE0B1B55A42000A9FE64 /* Dispatch.swift in Sources */,
 				552BBDDE1B5566EF00A9FE64 /* AppDelegate.swift in Sources */,
 				552BBE021B55671700A9FE64 /* CloudTipView.swift in Sources */,
@@ -413,6 +417,7 @@
 				552BBDF91B5566EF00A9FE64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		552BBDFA1B5566EF00A9FE64 /* Build configuration list for PBXNativeTarget "PixableCloudTipsTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +426,7 @@
 				552BBDFC1B5566EF00A9FE64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

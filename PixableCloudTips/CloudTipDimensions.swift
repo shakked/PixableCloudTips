@@ -13,17 +13,28 @@ class CloudTipDimensions: NSObject {
         let x = basePoint.x
         let y = basePoint.y
         var cloudCircles : [CloudCircle] = []
-        cloudCircles.append(CloudCircle(center: CGPointMake(x + 220.5, y + 22.5  ), radius: 7.0 , timeUntilNextAnimation: 0.0667))
-        cloudCircles.append(CloudCircle(center: CGPointMake(x + 208.5, y + 44.5  ), radius: 11.0, timeUntilNextAnimation: 0.0667))
-        cloudCircles.append(CloudCircle(center: CGPointMake(x + 185.5, y + 69.5  ), radius: 27.0, timeUntilNextAnimation: 0.0000))
-        cloudCircles.append(CloudCircle(center: CGPointMake(x + 143.5, y + 87.5  ), radius: 56.0, timeUntilNextAnimation: 0.0667))
-        cloudCircles.append(CloudCircle(center: CGPointMake(x + 102.5, y + 107.5 ), radius: 28.0, timeUntilNextAnimation: 0.0000))
-        cloudCircles.append(CloudCircle(center: CGPointMake(x + 93.5,  y + 69.5  ), radius: 27.5, timeUntilNextAnimation: 0.0667))
-        cloudCircles.append(CloudCircle(center: CGPointMake(x + 194.5, y + 106.5 ), radius: 28.0, timeUntilNextAnimation: 0.0000))
-        cloudCircles.append(CloudCircle(center: CGPointMake(x + 227.5, y + 87.5  ), radius: 37.0, timeUntilNextAnimation: 0.0667))
-        cloudCircles.append(CloudCircle(center: CGPointMake(x + 59.5 , y + 88.5  ), radius: 37.0, timeUntilNextAnimation: 0.0000))
-        cloudCircles.append(CloudCircle(center: CGPointMake(x + 265.5, y + 97.5  ), radius: 17.0, timeUntilNextAnimation: 0.0667))
-        cloudCircles.append(CloudCircle(center: CGPointMake(x + 21.5 , y + 77.5  ), radius: 17.0, timeUntilNextAnimation: 0.0000))
+
+        let hugeCircleRadius    : CGFloat = 56.0
+        let largeCircleRadius   : CGFloat = 37.0
+        let mediumCircleRadius  : CGFloat = 27.0
+        let smallCircleRadius   : CGFloat = 17.0
+        let smallerCircleRadius : CGFloat = 11.0
+        let tiniestCircleRadius : CGFloat = 7.0
+
+        let animationIntervalZero     : NSTimeInterval = 0.00000
+        let animationIntervalDefault  : NSTimeInterval = 0.06667
+        
+        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 220.5, y: y + 22.5  ), radius: .Tiny   , animationInterval: .Default))
+        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 208.5, y: y + 44.5  ), radius: .Smaller, animationInterval: .Default))
+        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 185.5, y: y + 69.5  ), radius: .Medium , animationInterval: .Zero   ))
+        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 143.5, y: y + 87.5  ), radius: .Huge   , animationInterval: .Default))
+        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 102.5, y: y + 107.5 ), radius: .Medium , animationInterval: .Zero   ))
+        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 93.5,  y: y + 69.5  ), radius: .Medium , animationInterval: .Default))
+        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 194.5, y: y + 106.5 ), radius: .Medium , animationInterval: .Zero   ))
+        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 227.5, y: y + 87.5  ), radius: .Large  , animationInterval: .Default))
+        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 59.5 , y: y + 88.5  ), radius: .Large  , animationInterval: .Zero   ))
+        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 265.5, y: y + 97.5  ), radius: .Small  , animationInterval: .Default))
+        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 21.5 , y: y + 77.5  ), radius: .Small  , animationInterval: .Zero   ))
         return cloudCircles
     }
     
@@ -36,11 +47,25 @@ class CloudTipDimensions: NSObject {
 struct CloudCircle {
     let center : CGPoint
     let radius : CGFloat
-    let timeUntilNextAnimation : NSTimeInterval
+    let animationInterval : NSTimeInterval
     
-    init(center: CGPoint, radius: CGFloat, timeUntilNextAnimation: NSTimeInterval) {
+    init(center: CGPoint, radius: CloudCircleRadius, animationInterval: AnimationInterval) {
         self.center = center
-        self.radius = radius
-        self.timeUntilNextAnimation = timeUntilNextAnimation
+        self.radius = radius.rawValue
+        self.animationInterval = animationInterval.rawValue
     }
+}
+
+enum AnimationInterval: NSTimeInterval {
+    case Zero    = 0.00000
+    case Default = 0.06667
+}
+
+enum CloudCircleRadius: CGFloat {
+    case Huge    = 56.0
+    case Large   = 37.0
+    case Medium  = 27.0
+    case Small   = 17.0
+    case Smaller = 11.0
+    case Tiny    = 7.0
 }
