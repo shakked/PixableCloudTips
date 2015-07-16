@@ -12,12 +12,10 @@ import Foundation
 class CloudTipView: UIView {
     let cloudColor = UIColor(red: 51.0/255, green: 131.0/255, blue: 1, alpha: 1.0)
     let basePoint : CGPoint
-    var cloudView : UIView
 
     init(basePoint: CGPoint) {
         self.basePoint = basePoint
-        let frame = CGRectMake(basePoint.x, basePoint.y, 286, 147)
-        cloudView = UIView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height))
+        let frame = CGRect(x: basePoint.x, y: basePoint.y, width: 286, height: 147)
         super.init(frame: frame)
     }
 
@@ -27,7 +25,6 @@ class CloudTipView: UIView {
     
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
-        addSubview(cloudView)
         
         let cloudCircles : [CloudCircle] = CloudTipDimensions.cloudCircles(CGPointMake(0, 0))
     
@@ -39,9 +36,9 @@ class CloudTipView: UIView {
         for cloudCircle in cloudCircles {
             self.drawBlueCircle(cloudCircle)
         }
-        
+
         //Once the circles are all in their right positions (blue ones on top of white ones), then we animate them
-        for layer in cloudView.layer.sublayers {
+        for layer in self.layer.sublayers {
             if let layer = layer as? CloudCircleLayer {
                 self.addAnimationToLayer(layer)
             }
@@ -60,7 +57,7 @@ class CloudTipView: UIView {
         whiteCircleLayer.position = cloudCircle.center
         whiteCircleLayer.bounds = path.bounds
         
-        cloudView.layer.addSublayer(whiteCircleLayer)
+        layer.addSublayer(whiteCircleLayer)
     }
     
     func drawBlueCircle(cloudCircle: CloudCircle) {
@@ -74,7 +71,7 @@ class CloudTipView: UIView {
         blueCircleLayer.position = cloudCircle.center
         blueCircleLayer.bounds = path.bounds
         
-        cloudView.layer.addSublayer(blueCircleLayer)
+        layer.addSublayer(blueCircleLayer)
     }
     
     
