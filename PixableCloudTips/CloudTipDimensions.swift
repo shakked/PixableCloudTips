@@ -20,21 +20,18 @@ class CloudTipDimensions: NSObject {
         let smallCircleRadius   : CGFloat = 17.0
         let smallerCircleRadius : CGFloat = 11.0
         let tiniestCircleRadius : CGFloat = 7.0
-
-        let animationIntervalZero     : NSTimeInterval = 0.00000
-        let animationIntervalDefault  : NSTimeInterval = 0.06667
         
-        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 220.5, y: y + 22.5  ), radius: .Tiny   , animationInterval: .Default))
-        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 208.5, y: y + 44.5  ), radius: .Smaller, animationInterval: .Default))
-        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 185.5, y: y + 69.5  ), radius: .Medium , animationInterval: .Zero   ))
-        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 143.5, y: y + 87.5  ), radius: .Huge   , animationInterval: .Default))
-        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 102.5, y: y + 107.5 ), radius: .Medium , animationInterval: .Zero   ))
-        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 93.5,  y: y + 69.5  ), radius: .Medium , animationInterval: .Default))
-        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 194.5, y: y + 106.5 ), radius: .Medium , animationInterval: .Zero   ))
-        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 227.5, y: y + 87.5  ), radius: .Large  , animationInterval: .Default))
-        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 59.5 , y: y + 88.5  ), radius: .Large  , animationInterval: .Zero   ))
-        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 265.5, y: y + 97.5  ), radius: .Small  , animationInterval: .Default))
-        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 21.5 , y: y + 77.5  ), radius: .Small  , animationInterval: .Zero   ))
+        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 220.5, y: y + 22.5  ), radius: .Tiny   , animationInterval: .Zero))
+        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 208.5, y: y + 44.5  ), radius: .Smaller, animationInterval: .Zero))
+        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 185.5, y: y + 69.5  ), radius: .Medium , animationInterval: .Zero))
+        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 143.5, y: y + 87.5  ), radius: .Huge   , animationInterval: .Zero))
+        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 102.5, y: y + 107.5 ), radius: .Medium , animationInterval: .Zero))
+        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 93.5,  y: y + 69.5  ), radius: .Medium , animationInterval: .Zero))
+        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 194.5, y: y + 106.5 ), radius: .Medium , animationInterval: .Zero))
+        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 227.5, y: y + 87.5  ), radius: .Large  , animationInterval: .Zero))
+        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 59.5 , y: y + 88.5  ), radius: .Large  , animationInterval: .Zero))
+        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 265.5, y: y + 97.5  ), radius: .Small  , animationInterval: .Zero))
+        cloudCircles.append(CloudCircle(center: CGPoint(x: x + 21.5 , y: y + 77.5  ), radius: .Small  , animationInterval: .Zero))
         return cloudCircles
     }
     
