@@ -25,7 +25,7 @@ class CloudTipViewController: UIViewController {
     
     func showCloudTipView() {
         cloudTipView?.removeFromSuperview()
-        cloudTipView = CloudTipView(basePoint: CGPointMake(30, 30))
+        cloudTipView = CloudTipView(basePoint: CGPointMake(200, 200))
         cloudTipView!.backgroundColor = UIColor.clearColor()
         view.addSubview(cloudTipView!)
     }
