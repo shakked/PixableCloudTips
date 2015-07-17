@@ -36,6 +36,7 @@ class CloudTipView: UIView {
         
         addSubview(textLabel)
         textLabel.layer.zPosition = 1
+        textLabel.alpha = 0
         
         
         //We draw the white circles first because we want them to be behind the blue circles
@@ -53,7 +54,12 @@ class CloudTipView: UIView {
                 self.addAnimationToLayer(layer, layerDelay: layer.delay)
             }
         }
-        self.addAnimationToLayer(textLabel.layer, layerDelay: 0)
+        self.addAnimationToLayer(textLabel.layer, layerDelay: 0.2333)
+        UIView.animateWithDuration(0.1, delay: 0.2333, options: nil, animations: { () -> Void in
+            self.textLabel.alpha = 1.0
+        }, completion: nil)
+        
+        
         
         //After a 2 second delay, we animate them all to be removed
         dispatch_after(2.0, queue: dispatch_get_main_queue()) {
@@ -69,7 +75,7 @@ class CloudTipView: UIView {
     func drawWhiteCircle(cloudCircle: CloudCircle) {
         let whiteCircleLayer = CloudCircleLayer()
         let path = pathForCloudCircle(cloudCircle)
-        whiteCircleLayer.delay = cloudCircle.animationInterval
+        whiteCircleLayer.delay = cloudCircle.startTime
         whiteCircleLayer.fillColor = UIColor.whiteColor().CGColor
         whiteCircleLayer.strokeColor = UIColor.whiteColor().CGColor
         whiteCircleLayer.lineWidth = 6.0
@@ -83,7 +89,7 @@ class CloudTipView: UIView {
     func drawBlueCircle(cloudCircle: CloudCircle) {
         let path = pathForCloudCircle(cloudCircle)
         let blueCircleLayer = CloudCircleLayer()
-        blueCircleLayer.delay = cloudCircle.animationInterval
+        blueCircleLayer.delay = cloudCircle.startTime
         blueCircleLayer.fillColor = cloudColor.CGColor
         blueCircleLayer.strokeColor = cloudColor.CGColor
         blueCircleLayer.lineWidth = 3.0
