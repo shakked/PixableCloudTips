@@ -31,13 +31,13 @@ class CloudTipDimensions: NSObject {
 }
 
 struct Offset {
-    static let Zero : CGFloat = 0
+    static let Zero     : CGFloat = 0
     static let Adjacent : CGFloat = 10
-    static let Close : CGFloat = 19
-    static let Nearer : CGFloat = 41
-    static let Near : CGFloat = 52
-    static let Far : CGFloat = 65
-    static let Farther : CGFloat = 85
+    static let Close    : CGFloat = 19
+    static let Nearer   : CGFloat = 41
+    static let Near     : CGFloat = 52
+    static let Far      : CGFloat = 65
+    static let Farther  : CGFloat = 85
     static let Farthest : CGFloat = 123
 }
 
