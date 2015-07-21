@@ -13,9 +13,11 @@ class CloudTipView: UIView {
     let cloudColor = UIColor(red: 51.0/255, green: 131.0/255, blue: 1, alpha: 1.0)
     let basePoint : CGPoint
     var textLabel : UILabel
+    var entryType : EntryType
 
-    init(basePoint: CGPoint) {
+    init(basePoint: CGPoint, entryType: EntryType) {
         self.basePoint = basePoint
+        self.entryType = entryType
         let frame = CGRect(x: basePoint.x - 142, y: basePoint.y - 87, width: 284, height: 146)
         textLabel = UILabel(frame: CGRect(x: 60, y: 62, width: 170, height: 50))
         textLabel.text = "Pixable makes sharing with your friends easy!"
@@ -32,7 +34,7 @@ class CloudTipView: UIView {
     
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
-        let cloudCircles : [CloudCircle] = CloudTipDimensions.cloudCircles(CGPoint(x: 142, y: 88))
+        let cloudCircles : [CloudCircle] = CloudTipDimensions.cloudCircles(CGPoint(x: 142, y: 88), entryType: entryType)
         
         addSubview(textLabel)
         textLabel.layer.zPosition = 1

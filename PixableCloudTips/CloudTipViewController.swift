@@ -11,7 +11,6 @@ import UIKit
 class CloudTipViewController: UIViewController {
     
     var cloudTipView : CloudTipView?
-    var filledCloudView : FilledCloudView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +24,7 @@ class CloudTipViewController: UIViewController {
     
     func showCloudTipView() {
         cloudTipView?.removeFromSuperview()
-        cloudTipView = CloudTipView(basePoint: CGPointMake(200, 200))
+        cloudTipView = CloudTipView(basePoint: CGPointMake(150, 200), entryType: .TopCenter)
         cloudTipView!.backgroundColor = UIColor.clearColor()
         view.addSubview(cloudTipView!)
     }
