@@ -14,6 +14,7 @@ class CloudTipView: UIView {
     let basePoint : CGPoint
     var textLabel : UILabel
     var entryType : EntryType
+    var delegate : CloudTipViewDelegate?
 
     init(basePoint: CGPoint, entryType: EntryType) {
         self.basePoint = basePoint
@@ -49,7 +50,7 @@ class CloudTipView: UIView {
         for cloudCircle in cloudCircles {
             self.drawBlueCircle(cloudCircle)
         }
-
+        
         //Once the circles are all in their right positions (blue ones on top of white ones), then we animate them
         for layer in self.layer.sublayers {
             if let layer = layer as? CloudCircleLayer {
@@ -61,6 +62,7 @@ class CloudTipView: UIView {
             self.textLabel.alpha = 1.0
         }, completion: nil)
         
+        delegate?.didShowCloudTipView()
         
         
         //After a 2 second delay, we animate them all to be removed
@@ -71,6 +73,7 @@ class CloudTipView: UIView {
                 }
             }
             self.hideAnimationToLayer(self.textLabel.layer, layerDelay: 0.2333)
+            self.delegate?.didHideCloudTipView()
         }
     }
     
@@ -163,4 +166,9 @@ class CloudTipView: UIView {
 
 class CloudCircleLayer: CAShapeLayer {
     var delay : NSTimeInterval!
+}
+
+protocol CloudTipViewDelegate {
+    func didShowCloudTipView()
+    func didHideCloudTipView()
 }

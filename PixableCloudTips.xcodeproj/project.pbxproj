@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4AB528441B5EA14A009A3B0B /* TipManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB528431B5EA14A009A3B0B /* TipManager.swift */; };
 		552BBDDE1B5566EF00A9FE64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552BBDDD1B5566EF00A9FE64 /* AppDelegate.swift */; };
 		552BBDE51B5566EF00A9FE64 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552BBDE41B5566EF00A9FE64 /* Images.xcassets */; };
 		552BBDE81B5566EF00A9FE64 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552BBDE61B5566EF00A9FE64 /* LaunchScreen.xib */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4AB528431B5EA14A009A3B0B /* TipManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipManager.swift; sourceTree = "<group>"; };
 		552BBDD81B5566EF00A9FE64 /* PixableCloudTips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixableCloudTips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		552BBDDC1B5566EF00A9FE64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		552BBDDD1B5566EF00A9FE64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		552BBDCF1B5566EF00A9FE64 = {
 			isa = PBXGroup;
 			children = (
+				4AB528431B5EA14A009A3B0B /* TipManager.swift */,
 				552BBDDA1B5566EF00A9FE64 /* PixableCloudTips */,
 				552BBDF01B5566EF00A9FE64 /* PixableCloudTipsTests */,
 				552BBDD91B5566EF00A9FE64 /* Products */,
@@ -225,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				552BBE041B55672700A9FE64 /* CloudTipDimensions.swift in Sources */,
+				4AB528441B5EA14A009A3B0B /* TipManager.swift in Sources */,
 				552BBDFF1B55670800A9FE64 /* CloudTipViewController.swift in Sources */,
 				552BBE181B56AD5000A9FE64 /* FilledCloudView.swift in Sources */,
 				552BBE0B1B55A42000A9FE64 /* Dispatch.swift in Sources */,
