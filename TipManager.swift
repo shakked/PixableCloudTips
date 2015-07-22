@@ -12,7 +12,7 @@ class TipManager: NSObject, CloudTipViewDelegate {
     
     static let sharedManager = TipManager()
     private var isShowingTip : Bool = false
-    private var tips : [Tip] = [FavoriteTip(), OfflineModeTip(), SharingTip(), CategoriesTip(), RateUsTip()]
+    private var tips : [Tip] = [FavoriteTip(), OfflineModeTip(), SharingTip(), CategoriesTip(), SwipeSubCategoriesTip(), RateUsTip()]
     
     func didShowCloudTipView() {
         isShowingTip = true
@@ -34,18 +34,19 @@ class TipManager: NSObject, CloudTipViewDelegate {
         return viewCount
     }
     
-    class func checkTipAction(tipLogic: TipLogic) -> Bool {
+    class func didShowTipType(tipType: TipType) -> Bool {
         let defaults = NSUserDefaults.standardUserDefaults()
-        let bool = defaults.boolForKey(tipLogic.rawValue)
+        let bool = defaults.boolForKey(tipType.rawValue)
         return bool
     }
     
-    func showTipIfNecessary(inputPoint: CGPoint) {
+    func tipToShow() -> Tip? {
         for tip in tips {
             if tip.shouldShow() {
-                tip.show(inputPoint)
+                return tip
             }
         }
+        return nil
     }
 }
 
@@ -58,24 +59,27 @@ struct Constants {
     }
 }
 
-enum TipLogic: String {
-    case DidFavorite = "DidFavorite"
-    case DidAccessMyPixable = "AccessMyPixable"
-    case DidShare = "DidShare"
-    case DidViewCategories = "DidViewCategories"
-    case DidSwipeCategories = "DidSwipeCategories"
-    case DidPromptToRateUs = "DidPromptToRateUs"
+enum TipType: String {
+    case Favorite = "Favorite"
+    case OfflineMode = "OfflineMode"
+    case Sharing = "Sharing"
+    case Categories = "Categories"
+    case SwipeSubCategories = "SwipeSubCategories"
+    case RateUs = "RateUs"
 }
 
 protocol Tip {
+    var type : TipType { get }
+    var text : String { get }
     func shouldShow() -> Bool
-    func show(highlightedView: UIView)
 }
 
 struct FavoriteTip: Tip {
+    let type : TipType = .Favorite
+    let text = "Tap the heart to save an article or photo"
     func shouldShow() -> Bool {
         let viewCount = TipManager.viewCount(Constants.ViewControllers.GridViewController)
-        if (!TipManager.checkTipAction(.DidFavorite) && (viewCount == 1 || viewCount >= 4)) && !TipManager.sharedManager.isShowingTip {
+        if (!TipManager.didShowTipType(type) && (viewCount == 1 || viewCount >= 4)) && !TipManager.sharedManager.isShowingTip {
             return true
         }
         return false
@@ -84,9 +88,11 @@ struct FavoriteTip: Tip {
 }
 
 struct OfflineModeTip: Tip {
+    let type : TipType = .OfflineMode
+    let text = "Access your saved content here even when you're offline"
     func shouldShow() -> Bool {
         let viewCount = TipManager.viewCount(Constants.ViewControllers.GridViewController)
-        if (!TipManager.checkTipAction(.DidAccessMyPixable) && (viewCount == 1 || viewCount >= 4)) && !TipManager.sharedManager.isShowingTip {
+        if (!TipManager.didShowTipType(type) && (viewCount == 1 || viewCount >= 4)) && !TipManager.sharedManager.isShowingTip {
             return true
         }
         return false
@@ -94,9 +100,11 @@ struct OfflineModeTip: Tip {
 }
 
 struct SharingTip: Tip {
+    let type : TipType = .Sharing
+    let text = "Pixable makes sharing with your friends easy"
     func shouldShow() -> Bool {
         let viewCount = TipManager.viewCount(Constants.ViewControllers.GridViewController)
-        if (!TipManager.checkTipAction(.DidShare) && viewCount >= 2) && !TipManager.sharedManager.isShowingTip {
+        if (!TipManager.didShowTipType(type) && viewCount >= 2) && !TipManager.sharedManager.isShowingTip {
             return true
         }
         return false
@@ -104,9 +112,23 @@ struct SharingTip: Tip {
 }
 
 struct CategoriesTip: Tip {
+    let type : TipType = .Categories
+    let text = "Welcome back! To view content from more categories tap here"
     func shouldShow() -> Bool {
         let viewCount = TipManager.viewCount(Constants.ViewControllers.CategoryViewController)
-        if (!TipManager.checkTipAction(.DidSwipeCategories) && viewCount >= 1) && !TipManager.sharedManager.isShowingTip {
+        if (!TipManager.didShowTipType(type) && viewCount >= 1) && !TipManager.sharedManager.isShowingTip {
+            return true
+        }
+        return false
+    }
+}
+
+struct SwipeSubCategoriesTip: Tip {
+    let type : TipType = .SwipeSubCategories
+    let text = "Discover more Pixable stories by swiping right here"
+    func shouldShow() -> Bool {
+        let viewCount = TipManager.viewCount(Constants.ViewControllers.GridViewController)
+        if (!TipManager.didShowTipType(type) && viewCount >= 1) && !TipManager.sharedManager.isShowingTip {
             return true
         }
         return false
@@ -114,11 +136,14 @@ struct CategoriesTip: Tip {
 }
 
 struct RateUsTip: Tip {
+    let type : TipType = .RateUs
+    let text = "Are you enjoying Pixable? Please rate the app"
     func shouldShow() -> Bool {
         let viewCount = TipManager.viewCount(Constants.ViewControllers.GridViewController)
-        if (!TipManager.checkTipAction(.DidPromptToRateUs) && viewCount >= 4) && !TipManager.sharedManager.isShowingTip {
+        if (!TipManager.didShowTipType(type) && viewCount >= 4) && !TipManager.sharedManager.isShowingTip {
             return true
         }
         return false
     }
 }
+
