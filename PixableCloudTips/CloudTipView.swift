@@ -15,13 +15,15 @@ class CloudTipView: UIView {
     var textLabel : UILabel
     var entryType : EntryType
     var delegate : CloudTipViewDelegate?
+    var tip : Tip
 
-    init(basePoint: CGPoint, entryType: EntryType) {
+    init(basePoint: CGPoint, entryType: EntryType, tip: Tip) {
         self.basePoint = basePoint
         self.entryType = entryType
+        self.tip = tip
         let frame = CGRect(x: basePoint.x - 142, y: basePoint.y - 87, width: 284, height: 146)
         textLabel = UILabel(frame: CGRect(x: 60, y: 62, width: 170, height: 50))
-        textLabel.text = "Pixable makes sharing with your friends easy!"
+        textLabel.text = tip.text
         textLabel.numberOfLines = 2
         textLabel.textAlignment = NSTextAlignment.Center
         textLabel.font = UIFont(name: "AvenirNext-Regular", size: 15.0)!
